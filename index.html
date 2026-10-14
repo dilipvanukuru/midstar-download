@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2026 Mid Star. All rights reserved. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Mid Star Chatbot for Windows</title>
+<meta name="description" content="Mid Star Chatbot for Windows: a private library of your own documents, answered with citations.">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#F0EBFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16131F" media="(prefers-color-scheme: dark)">
+<style>
+  :root {
+    --bg-a: #FFF4E8; --bg-b: #F0EBFF; --paper: #FFFFFF; --ink: #201B3D; --ink-soft: #6B6390;
+    --blue: #2D6CDF; --blue-deep: #1E4FB0; --purple: #7C5CFC; --red: #F0503F; --rule: #EAE3FA;
+    --tint: #F0EBFF; --warn-ink: #8A5A00; --warn-bg: #FFF4DA;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-a: #16131F; --bg-b: #1C1730; --paper: #1E1A2B; --ink: #EEEAF8; --ink-soft: #A79FC8;
+      --blue: #6E9BF0; --blue-deep: #9DBBF5; --purple: #A08BFF; --red: #FF7B6B; --rule: #342D4A;
+      --tint: #2A2440; --warn-ink: #FFD27A; --warn-bg: #3A2E14;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%) fixed;
+    line-height: 1.55;
+  }
+  main { width: min(680px, 100%); margin: 0 auto; padding: 48px 16px 40px; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand img { width: 56px; height: 56px; border-radius: 16px; }
+  h1 {
+    margin: 0;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.1;
+    background: linear-gradient(100deg, var(--blue) 0%, var(--purple) 55%, var(--red) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .for { margin: 2px 0 0; font-size: 0.95rem; color: var(--ink-soft); }
+  .tagline { margin: 22px 0 26px; font-size: 1.12rem; }
+  .card {
+    margin: 0 0 18px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    background: var(--paper);
+    box-shadow: 0 1px 2px rgba(32, 27, 61, 0.06), 0 8px 24px rgba(32, 27, 61, 0.06);
+  }
+  .download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(100deg, var(--blue) 0%, var(--purple) 100%);
+  }
+  .download:focus-visible, .link-btn:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; }
+  .download svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .meta { margin: 12px 0 0; font-size: 0.88rem; color: var(--ink-soft); }
+  .phone {
+    margin: 0 0 18px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    color: var(--warn-ink);
+    background: var(--warn-bg);
+    font-size: 0.95rem;
+  }
+  .phone p { margin: 0 0 10px; }
+  .link-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--blue-deep);
+    background: var(--paper);
+    cursor: pointer;
+  }
+  h2 { margin: 0 0 10px; font-size: 1.05rem; }
+  ol { margin: 0; padding-left: 1.3em; }
+  li { margin: 0 0 8px; }
+  li:last-child { margin: 0; }
+  .muted { color: var(--ink-soft); font-size: 0.9rem; }
+  code {
+    font-family: Consolas, "SFMono-Regular", Menlo, monospace;
+    font-size: 0.84rem;
+    padding: 1px 5px;
+    border-radius: 5px;
+    background: var(--tint);
+    overflow-wrap: anywhere;
+  }
+  footer { margin-top: 28px; font-size: 0.82rem; color: var(--ink-soft); text-align: center; }
+  footer a { color: inherit; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">
+    <img src="icon-192.png" alt="" width="56" height="56">
+    <div>
+      <h1>Mid Star Chatbot</h1>
+      <p class="for">for Windows</p>
+    </div>
+  </div>
+  <p class="tagline">Your private library of documents, answered with citations.</p>
+
+  <div class="phone" id="phone" hidden>
+    <p><strong>Mid Star installs on a Windows PC.</strong> Send this page to your computer and download it there.</p>
+    <button type="button" class="link-btn" id="share">Share this link</button>
+  </div>
+
+  <section class="card">
+    <a class="download" id="download" href="https://github.com/dilipvanukuru/midstar-download/releases/latest/download/MidStarSetup.exe">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      Download for Windows
+    </a>
+    <p class="meta" id="meta">Version 1.4.0 · 111 MB · Windows 10 and 11, 64-bit</p>
+  </section>
+
+  <section class="card">
+    <h2>Install</h2>
+    <ol>
+      <li>Run <strong>MidStarSetup.exe</strong>. It installs for your Windows user only, with no administrator rights needed.</li>
+      <li>Windows may say <strong>"Windows protected your PC"</strong>, because the installer isn't code-signed yet. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+      <li>On first launch, choose your AI services and paste your API key. Cohere does everything with one key from <strong>dashboard.cohere.com/api-keys</strong>.</li>
+      <li>Add your documents in <strong>Settings → Documents</strong>, or attach them from the question box.</li>
+    </ol>
+    <p class="muted" style="margin: 12px 0 0">Installing over an earlier version keeps your library, keys and conversations.</p>
+  </section>
+
+  <section class="card">
+    <h2>Check the download</h2>
+    <p class="muted" style="margin: 0 0 8px">Its SHA-256 should be:</p>
+    <p style="margin: 0 0 10px"><code id="sha">2cdd1baf569fd680fa4260975ce7bcd924730c54517a3572560986580f2b9587</code></p>
+    <p class="muted" style="margin: 0">In PowerShell: <code>Get-FileHash .\MidStarSetup.exe</code></p>
+  </section>
+
+  <footer>
+    © 2026 Mid Star · <a href="https://github.com/dilipvanukuru/midstar-download/blob/main/LICENSE.txt">Licence</a>
+    · <a href="https://github.com/dilipvanukuru/midstar-download/releases">All versions and release notes</a>
+  </footer>
+</main>
+<script>
+// The newest release's version, size and checksum, so this page never needs
+// editing for a new version. If GitHub doesn't answer, the figures above stay.
+(async () => {
+  try {
+    const res = await fetch("https://api.github.com/repos/dilipvanukuru/midstar-download/releases/latest");
+    if (!res.ok) return;
+    const release = await res.json();
+    const asset = (release.assets || []).find((a) => a.name === "MidStarSetup.exe");
+    if (!asset) return;
+    const version = String(release.tag_name || "").replace(/^v/, "");
+    const mb = Math.round(asset.size / 1048576);
+    document.getElementById("meta").textContent = `Version ${version} · ${mb} MB · Windows 10 and 11, 64-bit`;
+    const sha = (release.body || "").match(/\b[0-9a-f]{64}\b/i);
+    if (sha) document.getElementById("sha").textContent = sha[0].toLowerCase();
+  } catch (err) {
+    // Offline or rate-limited: the built-in figures are shown.
+  }
+})();
+
+// Most people scan the QR code with a phone, which can't run a Windows installer.
+(() => {
+  const ua = navigator.userAgent;
+  const phone = /Android|iPhone|iPad|iPod|Mobile/i.test(ua) && !/Windows NT/i.test(ua);
+  if (!phone) return;
+  document.getElementById("phone").hidden = false;
+  const share = document.getElementById("share");
+  share.addEventListener("click", async () => {
+    const url = location.href.split("#")[0];
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: "Mid Star Chatbot for Windows", url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      share.textContent = "Link copied";
+    } catch (err) {
+      share.textContent = url;
+    }
+  });
+})();
+</script>
+</body>
+</html>

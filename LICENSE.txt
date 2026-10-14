@@ -1,0 +1,72 @@
+MID STAR CHATBOT — SOFTWARE LICENCE AGREEMENT
+
+Copyright (c) 2026 Mid Star. All rights reserved.
+
+This agreement is between you and Mid Star ("we", "us") and covers the Mid
+Star Chatbot software, including its source code, compiled program files,
+installer, templates, scripts, designs and documentation (the "Software").
+By installing, copying or using the Software, you agree to these terms. If
+you don't agree, don't install or use it.
+
+1. OWNERSHIP
+   The Software is licensed, not sold. Mid Star owns the Software and all
+   copyright and other intellectual property rights in it. The Software is
+   protected by copyright law and international treaties.
+
+2. WHAT YOU MAY DO
+   You may install and use the Software on computers you own or control,
+   for your own personal or internal business purposes, for as long as you
+   comply with this agreement.
+
+3. WHAT YOU MAY NOT DO
+   Unless Mid Star gives you written permission, you may not:
+   a. copy the Software, except as needed to install and use it, and for
+      one backup copy;
+   b. modify, adapt, translate or create derivative works of the Software;
+   c. reverse engineer, decompile, disassemble, unpack or otherwise try to
+      obtain the source code of the Software, except where applicable law
+      expressly permits it despite this restriction;
+   d. distribute, sell, rent, lease, lend, sublicense, publish or otherwise
+      make the Software available to anyone else, including as a hosted or
+      online service;
+   e. remove, change or hide any copyright notice, licence text or other
+      proprietary marking in the Software;
+   f. use the Software to break the law or to infringe anyone else's rights.
+
+4. YOUR DOCUMENTS AND DATA
+   The PDF documents you add, your questions, and the answers produced
+   belong to you or their respective owners. You are responsible for having
+   the right to use the documents you add. The Software stores your data on
+   your own computer. To answer questions, it sends passages of your
+   documents and your questions to Cohere (cohere.com) using the API key you
+   provide, so your use of that service is also governed by Cohere's terms.
+
+5. THIRD-PARTY COMPONENTS
+   The Software includes open-source components that are licensed to you
+   under their own licences, listed in THIRD-PARTY-NOTICES.txt. Nothing in
+   this agreement limits your rights under those licences for those
+   components.
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+   PURPOSE AND NON-INFRINGEMENT. Answers are generated automatically from your
+   documents and may be incomplete or wrong; check important information
+   against the source documents.
+
+7. LIMITATION OF LIABILITY
+   TO THE FULLEST EXTENT PERMITTED BY LAW, MID STAR WILL NOT BE LIABLE FOR ANY
+   INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, OR FOR ANY LOSS OF
+   DATA, PROFITS OR BUSINESS, ARISING FROM YOUR USE OF OR INABILITY TO USE THE
+   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+8. TERMINATION
+   This licence ends automatically if you break any of its terms. When it
+   ends, you must stop using the Software and delete all copies of it.
+
+9. GENERAL
+   If any part of this agreement is found unenforceable, the rest remains in
+   effect. This agreement is the entire agreement between you and Mid Star
+   about the Software.
+
+For permissions beyond this licence, contact Mid Star.
