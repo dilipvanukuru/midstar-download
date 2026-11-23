@@ -8,50 +8,13 @@
 <meta name="description" content="What Mid Star Chatbot keeps on your PC, and exactly what it sends, to whom.">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<meta name="theme-color" content="#F0EBFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#16131F" media="(prefers-color-scheme: dark)">
-<style>
-  :root {
-    --bg-a: #FFF4E8; --bg-b: #F0EBFF; --paper: #FFFFFF; --ink: #201B3D; --ink-soft: #6B6390;
-    --blue: #2D6CDF; --blue-deep: #1E4FB0; --purple: #7C5CFC; --red: #F0503F; --rule: #EAE3FA; --tint: #F0EBFF;
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg-a: #16131F; --bg-b: #1C1730; --paper: #1E1A2B; --ink: #EEEAF8; --ink-soft: #A79FC8;
-      --blue: #6E9BF0; --blue-deep: #9DBBF5; --purple: #A08BFF; --red: #FF7B6B; --rule: #342D4A; --tint: #2A2440;
-      color-scheme: dark;
-    }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; min-height: 100vh; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-         color: var(--ink); background: linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%) fixed; line-height: 1.6; }
-  main { width: min(720px, 100%); margin: 0 auto; padding: 40px 16px 40px; }
-  .back { display: inline-block; margin: 0 0 18px; color: var(--blue-deep); font-size: 0.92rem; text-decoration: none; }
-  .back:hover { text-decoration: underline; }
-  h1 { margin: 0 0 4px; font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: clamp(1.7rem, 5vw, 2.2rem); line-height: 1.15; }
-  .updated { margin: 0 0 22px; color: var(--ink-soft); font-size: 0.9rem; }
-  .card { margin: 0 0 16px; padding: 20px 24px; border-radius: 18px; background: var(--paper);
-          box-shadow: 0 1px 2px rgba(32, 27, 61, 0.06), 0 8px 24px rgba(32, 27, 61, 0.06); }
-  h2 { margin: 0 0 8px; font-size: 1.05rem; }
-  p, ul { margin: 0 0 10px; }
-  .card > :last-child { margin-bottom: 0; }
-  ul { padding-left: 1.3em; }
-  li { margin: 0 0 6px; }
-  a { color: var(--blue-deep); }
-  .summary { background: var(--tint); }
-  footer { margin-top: 26px; font-size: 0.82rem; color: var(--ink-soft); text-align: center; }
-  footer a { color: inherit; }
-  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-  th, td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-top: 1px solid var(--rule); }
-  th { font-weight: 600; }
-  .wide { overflow-x: auto; }
-  code { font-family: Consolas, "SFMono-Regular", Menlo, monospace; font-size: 0.84rem; padding: 1px 5px; border-radius: 5px; background: var(--tint); overflow-wrap: anywhere; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131313" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<main>
+<main class="wide-page">
   <a class="back" href="./">← Mid Star Chatbot</a>
   <h1>Privacy policy</h1>
   <p class="updated">Last updated 23 November 2026</p>
