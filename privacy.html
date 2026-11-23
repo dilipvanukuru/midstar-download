@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2026 Mid Star. All rights reserved. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy policy — Mid Star Chatbot</title>
+<meta name="description" content="What Mid Star Chatbot keeps on your PC, and exactly what it sends, to whom.">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#F0EBFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16131F" media="(prefers-color-scheme: dark)">
+<style>
+  :root {
+    --bg-a: #FFF4E8; --bg-b: #F0EBFF; --paper: #FFFFFF; --ink: #201B3D; --ink-soft: #6B6390;
+    --blue: #2D6CDF; --blue-deep: #1E4FB0; --purple: #7C5CFC; --red: #F0503F; --rule: #EAE3FA; --tint: #F0EBFF;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-a: #16131F; --bg-b: #1C1730; --paper: #1E1A2B; --ink: #EEEAF8; --ink-soft: #A79FC8;
+      --blue: #6E9BF0; --blue-deep: #9DBBF5; --purple: #A08BFF; --red: #FF7B6B; --rule: #342D4A; --tint: #2A2440;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         color: var(--ink); background: linear-gradient(160deg, var(--bg-a) 0%, var(--bg-b) 100%) fixed; line-height: 1.6; }
+  main { width: min(720px, 100%); margin: 0 auto; padding: 40px 16px 40px; }
+  .back { display: inline-block; margin: 0 0 18px; color: var(--blue-deep); font-size: 0.92rem; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  h1 { margin: 0 0 4px; font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: clamp(1.7rem, 5vw, 2.2rem); line-height: 1.15; }
+  .updated { margin: 0 0 22px; color: var(--ink-soft); font-size: 0.9rem; }
+  .card { margin: 0 0 16px; padding: 20px 24px; border-radius: 18px; background: var(--paper);
+          box-shadow: 0 1px 2px rgba(32, 27, 61, 0.06), 0 8px 24px rgba(32, 27, 61, 0.06); }
+  h2 { margin: 0 0 8px; font-size: 1.05rem; }
+  p, ul { margin: 0 0 10px; }
+  .card > :last-child { margin-bottom: 0; }
+  ul { padding-left: 1.3em; }
+  li { margin: 0 0 6px; }
+  a { color: var(--blue-deep); }
+  .summary { background: var(--tint); }
+  footer { margin-top: 26px; font-size: 0.82rem; color: var(--ink-soft); text-align: center; }
+  footer a { color: inherit; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-top: 1px solid var(--rule); }
+  th { font-weight: 600; }
+  .wide { overflow-x: auto; }
+  code { font-family: Consolas, "SFMono-Regular", Menlo, monospace; font-size: 0.84rem; padding: 1px 5px; border-radius: 5px; background: var(--tint); overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./">← Mid Star Chatbot</a>
+  <h1>Privacy policy</h1>
+  <p class="updated">Last updated 23 November 2026</p>
+
+  <section class="card summary">
+    <h2>In short</h2>
+    <ul>
+      <li>Your documents, their index and your chats stay on your PC. The index and chats are encrypted there.</li>
+      <li>Mid Star has no servers that receive your documents or questions, no accounts, no analytics and no advertising.</li>
+      <li>To search and answer, the app sends text to the AI service <em>you</em> choose, with <em>your</em> key. That's the only place your content goes.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>What stays on your PC</h2>
+    <p>Your documents, the search index built from them, your chats and answers, your settings and API keys, your profile picture and the Pro licence file are kept in the app's data folder on your PC (<code>%APPDATA%\Mid Star Chatbot</code>). The index, answers, chat titles and conversation memory are encrypted with a key that Windows protects for your user account. Uninstalling the app asks whether to delete this folder too; your own document files are never deleted.</p>
+  </section>
+
+  <section class="card">
+    <h2>Everything the app sends, and to whom</h2>
+    <div class="wide">
+    <table>
+      <tr><th>When</th><th>What is sent</th><th>To</th></tr>
+      <tr><td>Indexing a document</td><td>The document's text, in passages, to turn it into search vectors. Not sent for documents set to <em>keywords only</em>, or when search runs on this PC.</td><td>Your chosen search service (for example Cohere, Voyage AI or OpenAI), with your key</td></tr>
+      <tr><td>Asking a question</td><td>The question, and the few passages that best match it (to rank them and write the answer). For a follow-up, a short summary of the chat so far.</td><td>Your chosen search and answer services (for example Cohere, OpenAI or Anthropic), with your key</td></tr>
+      <tr><td>Testing an API key</td><td>The key, to check it works.</td><td>That key's own service</td></tr>
+      <tr><td>Activating and checking Pro</td><td>Your licence key and a random name for this PC's activation. Every few days, the key again to check it's still valid.</td><td>Lemon Squeezy</td></tr>
+      <tr><td>Checking for updates, once a day</td><td>A plain request for the newest version number. Nothing about you or your PC is included.</td><td>GitHub</td></tr>
+      <tr><td>Send feedback, only when you choose to</td><td>The kind of report, your message, the reply address if you give one, and the version line (app version and Windows version).</td><td>Mid Star, by email through a Google Apps Script relay</td></tr>
+    </table>
+    </div>
+    <p style="margin-top: 12px">Each AI service handles what it receives under its own privacy policy and data terms, which you accept when you create your key. Several of them offer settings to stop your data being used for training; check your account with them.</p>
+  </section>
+
+  <section class="card">
+    <h2>What we never collect</h2>
+    <ul>
+      <li>Your documents, questions, answers or chats.</li>
+      <li>Usage statistics, crash reports or telemetry of any kind. The Usage page in the app is worked out on your PC and stays there.</li>
+      <li>Your name, email or payment details, except what you choose to put in a feedback message. Payments are handled by Lemon Squeezy, not by us.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Payments</h2>
+    <p>When you buy Pro, Lemon Squeezy collects your name, email, billing address and payment details to process the payment, as the seller of record. See <a href="https://www.lemonsqueezy.com/privacy">Lemon Squeezy's privacy policy</a>. We see the order (your name, email and what you bought) in the Lemon Squeezy dashboard, and use it only to support your order and licence.</p>
+  </section>
+
+  <section class="card">
+    <h2>This website</h2>
+    <p>This page and the download are hosted on GitHub, which records visits and downloads as described in <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>. The page uses Google Fonts. It sets no cookies of its own and has no analytics.</p>
+  </section>
+
+  <section class="card">
+    <h2>Your choices and rights</h2>
+    <ul>
+      <li>Delete a document, a chat or all your data at any time from inside the app, or by deleting its data folder.</li>
+      <li>Choose an AI service that runs on your PC for searching, or set sensitive documents to keywords only, so their text isn't sent anywhere.</li>
+      <li>Turn off the daily update check by setting <code>MIDSTAR_UPDATE_CHECK=0</code>.</li>
+      <li>To see, correct or delete what we hold about you (feedback messages and orders), send feedback from the app or reply to your receipt.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Changes</h2>
+    <p>If the app starts sending anything new, we'll update this page before that version is released, and change the date at the top.</p>
+  </section>
+
+  <footer>
+    © 2026 Mid Star · <a href="./">Download</a> · <a href="terms.html">Terms</a> · <a href="LICENSE.txt">Licence agreement</a>
+  </footer>
+</main>
+</body>
+</html>

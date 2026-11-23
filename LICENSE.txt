@@ -34,12 +34,15 @@ you don't agree, don't install or use it.
    f. use the Software to break the law or to infringe anyone else's rights.
 
 4. YOUR DOCUMENTS AND DATA
-   The PDF documents you add, your questions, and the answers produced
-   belong to you or their respective owners. You are responsible for having
-   the right to use the documents you add. The Software stores your data on
-   your own computer. To answer questions, it sends passages of your
-   documents and your questions to Cohere (cohere.com) using the API key you
-   provide, so your use of that service is also governed by Cohere's terms.
+   The documents you add, your questions, and the answers produced belong
+   to you or their respective owners. You are responsible for having the
+   right to use the documents you add. The Software stores your data on
+   your own computer. To index documents and answer questions, it sends
+   passages of your documents and your questions to the AI services you
+   choose (such as Cohere, Voyage AI, OpenAI or Anthropic) using the API
+   keys you provide, so your use of those services is also governed by
+   their terms. The privacy policy lists everything the Software sends:
+   https://dilipvanukuru.github.io/midstar-download/privacy.html
 
 5. THIRD-PARTY COMPONENTS
    The Software includes open-source components that are licensed to you
@@ -64,7 +67,12 @@ you don't agree, don't install or use it.
    This licence ends automatically if you break any of its terms. When it
    ends, you must stop using the Software and delete all copies of it.
 
-9. GENERAL
+9. MID STAR PRO
+   Pro is a paid licence key, sold through Lemon Squeezy. Buying and using
+   it is covered by the terms of use and sale:
+   https://dilipvanukuru.github.io/midstar-download/terms.html
+
+10. GENERAL
    If any part of this agreement is found unenforceable, the rest remains in
    effect. This agreement is the entire agreement between you and Mid Star
    about the Software.
