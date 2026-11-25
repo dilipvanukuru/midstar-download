@@ -34,7 +34,19 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
       Download for Windows
     </a>
-    <p class="meta" id="meta">Version 1.5.0 · 111 MB · Windows 10 and 11, 64-bit</p>
+    <p class="meta" id="meta">Version 1.8.0 · 115 MB · Windows 10 and 11, 64-bit</p>
+  </section>
+
+  <section class="card" id="whats-new">
+    <h2 id="whats-new-title">What's new in 1.8.0</h2>
+    <ul class="news" id="news">
+      <li><strong>Citations show the exact passage.</strong> Click a citation and the page opens beside the chat with the passage the answer used highlighted.</li>
+      <li><strong>One-click updates.</strong> From this version on, a new version installs itself.</li>
+      <li><strong>A floating button.</strong> A small Mid star button rests at the edge of your screen above every app.</li>
+      <li><strong>No duplicate documents.</strong> A file that's already in your library, whatever its name, isn't added again.</li>
+      <li><strong>When you asked.</strong> Each question shows the time it was asked, with dividers between days.</li>
+    </ul>
+    <p class="muted" style="margin: 10px 0 0"><a id="notes-link" href="https://github.com/dilipvanukuru/midstar-download/releases/latest">Full release notes</a></p>
   </section>
 
   <section class="card">
@@ -51,7 +63,7 @@
   <section class="card">
     <h2>Check the download</h2>
     <p class="muted" style="margin: 0 0 8px">Its SHA-256 should be:</p>
-    <p style="margin: 0 0 10px"><code id="sha">8f32a9e67965ada3fe871a8eeba5aba0d7a4e63813873adb51ab1e5119bee007</code></p>
+    <p style="margin: 0 0 10px"><code id="sha">0b77ffcb50ffe83c764a195a67f005c9a0179fbed3dd9db240fa42e8c57ed494</code></p>
     <p class="muted" style="margin: 0">In PowerShell: <code>Get-FileHash .\MidStarSetup.exe</code></p>
   </section>
 
@@ -62,8 +74,9 @@
   </footer>
 </main>
 <script>
-// The newest release's version, size and checksum, so this page never needs
-// editing for a new version. If GitHub doesn't answer, the figures above stay.
+// The newest release's version, size, checksum and what's new, so this page
+// never needs editing for a new version. If GitHub doesn't answer, the
+// figures above stay.
 (async () => {
   try {
     const res = await fetch("https://api.github.com/repos/dilipvanukuru/midstar-download/releases/latest");
@@ -76,10 +89,38 @@
     document.getElementById("meta").textContent = `Version ${version} · ${mb} MB · Windows 10 and 11, 64-bit`;
     const sha = (release.body || "").match(/\b[0-9a-f]{64}\b/i);
     if (sha) document.getElementById("sha").textContent = sha[0].toLowerCase();
+    showWhatsNew(version, release.body || "", release.html_url);
   } catch (err) {
     // Offline or rate-limited: the built-in figures are shown.
   }
 })();
+
+// "What's new": each paragraph of the notes' "New in ..." section that starts
+// with a bold lead, as the lead and its first sentence. Text only.
+function showWhatsNew(version, notes, url) {
+  const section = notes.replace(/\r\n/g, "\n").match(/^##\s*New in[^\n]*\n([\s\S]*?)(?=^##\s|(?![\s\S]))/im);
+  if (!section) return;
+  const items = [];
+  for (const para of section[1].split(/\n\s*\n/)) {
+    const m = para.trim().match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
+    if (!m) continue;
+    const plain = (s) => s.replace(/[*`_]/g, "").replace(/\s+/g, " ").trim();
+    const first = (plain(m[2]).match(/^.*?[.!?](\s|$)/) || [plain(m[2])])[0].trim();
+    items.push([plain(m[1]), first]);
+    if (items.length === 6) break;
+  }
+  if (!items.length) return;
+  const list = document.getElementById("news");
+  list.replaceChildren(...items.map(([lead, rest]) => {
+    const li = document.createElement("li");
+    const strong = document.createElement("strong");
+    strong.textContent = /[.!?]$/.test(lead) ? lead : `${lead}.`;
+    li.append(strong, rest ? ` ${rest}` : "");
+    return li;
+  }));
+  document.getElementById("whats-new-title").textContent = `What's new in ${version}`;
+  if (url && url.startsWith("https://github.com/")) document.getElementById("notes-link").href = url;
+}
 
 // Most people scan the QR code with a phone, which can't run a Windows installer.
 (() => {
